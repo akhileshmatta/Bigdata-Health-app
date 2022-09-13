@@ -1,0 +1,34 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="form-v10-content">
+            <form class="form-detail" #searchForm="ngForm" (ngSubmit)="getPatientInformation(searchForm.value)">
+                <div class="col-md-8">
+                    <div class="search">
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="form-control" name="patient_id" ngModel id="patient_id"
+                            placeholder="Enter patient id" required>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </form>
+            <div class="mt-5 col-6">
+                <table class="table table-bordered border-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">key</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" *ngFor="let inst of data">
+                            <td>{{inst[0]}}</td>
+                            <td>{{inst[1]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

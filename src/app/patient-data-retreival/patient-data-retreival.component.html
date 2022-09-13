@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="d-flex h-100 text-center text-white bg-dark">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div>
+        <!-- <h3 class="float-md-start mb-0  ">Patient's  Portal </h3> -->
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <a [class]="styles[0]" (click)="setTab(0)"><b>Patient Primary Data</b></a>&nbsp;&nbsp;&nbsp;
+          <a [class]="styles[1]" (click)="setTab(1)"><b>Patient Medication Data </b></a>&nbsp;&nbsp;&nbsp;
+          <a [class]="styles[2]" (click)="setTab(2)"><b>Patient Expenses</b></a>
+        </nav>
+      </div>
+    </header>
+  </div>
+</div>
+
+ 
+<div *ngIf="tabs[0]">
+  <app-patient-basic-data></app-patient-basic-data>
+</div>
+<div *ngIf="tabs[1]">
+  <app-patient-medication-data></app-patient-medication-data>
+</div>
+<div *ngIf="tabs[2]">
+  <app-patient-expenses-data></app-patient-expenses-data>
+</div>

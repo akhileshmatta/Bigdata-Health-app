@@ -1,0 +1,151 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="form-v10-content">
+            <form class="form-detail" #searchForm="ngForm" (ngSubmit)="getdrugInformation(searchForm.value)">
+                <div class="col-md-8">
+                    <div class="search">
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="form-control" name="drug_id" ngModel id="drug_id"
+                            placeholder="Enter Drug Id" required>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </form>
+            <!-- <div class="mt-5 col-6">
+                <table class="table table-bordered border-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">key</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" *ngFor="let key of keys">
+                            <td>{{key}}</td>
+                            <td>{{data[key]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> -->
+            <div class="row row-content m-5 border border-dark"  *ngIf="data.length != 0" >
+                <div class="contain">
+                  <h2>Pharmacy Drug Info</h2>
+                </div>
+                <br /><br /><br /><br />
+                <hr class="new" />
+                <div class="col-12 col-md-9">
+                  <div class="form-group row">
+                    <label for="drug_id" class="col-md-2 col-form-label font-weight-bold">
+                      drug_id</label
+                    >
+                    <div class="col-md-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="drug_id"
+                        placeholder="{{ data.drug_id }}"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="drug_name" class="col-md-2 col-form-label">
+                      drug_name</label
+                    >
+        
+                    <div class="col-md-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="drug_name"
+                        placeholder="{{ data.drug_name }}"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="drug_composition" class="col-md-2 col-form-label">
+                      drug_composition</label
+                    >
+        
+                    <div class="col-md-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="drug_composition"
+                        placeholder="{{ data.drug_composition }}"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="drug_state" class="col-md-2 col-form-label">
+                      drug_state</label
+                    >
+        
+                    <div class="col-md-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="drug_state"
+                        placeholder="{{ data.drug_state }}"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="drug_type" class="col-md-2 col-form-label">
+                      drug_type</label
+                    >
+        
+                    <div class="col-md-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="drug_type"
+                        placeholder="{{ data.drug_type }}"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="drug_manufacturer" class="col-md-2 col-form-label">
+                      drug_manufacturer</label
+                    >
+        
+                    <div class="col-md-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="drug_manufacturer"
+                        placeholder="{{ data.drug_manufacturer }}"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="drug_recommended_dosage" class="col-md-2 col-form-label">
+                     recommend_dosage</label
+                    >
+        
+                    <div class="col-md-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="drug_recommended_dosage"
+                        placeholder="{{ data.drug_recommended_dosage }}"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="record_creation_time" class="col-md-2 col-form-label">
+                        record_creation_time</label
+                    >
+        
+                    <div class="col-md-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="record_creation_time"
+                        placeholder="{{ data.record_creation_time}}"
+                      />
+                    </div>
+                  </div>
+        </div>
+    </div>
+</div>

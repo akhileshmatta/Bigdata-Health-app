@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div class="d-flex h-100 text-center text-white bg-dark">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div>
+        <!-- <h3 class="float-md-start mb-0  ">Patient's  Portal </h3> -->
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <ul>
+            <li><a [class]="styles[0]" (click)="setTab(0)">Patient Registration</a></li>
+            <li><a [class]="styles[1]" (click)="setTab(1)">Patient Admission details </a></li>
+            <li><a [class]="styles[3]" (click)="setTab(3)">Ambulance</a></li>
+            <li><a [class]="styles[2]" (click)="setTab(2)">Drugs</a></li>
+            
+            <!-- <a [class]="styles[4]" (click)="setTab(4)">Diagnostics</a> -->
+            <li><a [class]="styles[5]" (click)="setTab(5)">Surgery</a></li> 
+            <li><a [class]="styles[6]" (click)="setTab(6)">Procedures</a></li>
+            <li><a [class]="styles[7]" (click)="setTab(7)">Discharge Status</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+</div>  
+</div>
+
+<div *ngIf="tabs[0]">
+    <app-patient-reg></app-patient-reg>
+</div>
+<div *ngIf="tabs[1]">
+  <app-patient-visit-details></app-patient-visit-details>
+</div>
+<div *ngIf="tabs[2]">
+    <app-drugs-desc></app-drugs-desc>
+</div> 
+<div *ngIf="tabs[3]">
+    <app-patient-ambulance></app-patient-ambulance>
+</div>
+<div *ngIf="tabs[4]">
+    <app-diagnostics></app-diagnostics>
+</div>
+<div *ngIf="tabs[5]">
+  <app-surgery></app-surgery>
+</div>
+<div *ngIf="tabs[6]">
+  <app-procedure></app-procedure>
+</div>
+<div *ngIf="tabs[7]">
+  <app-discharge-status></app-discharge-status>
+</div>
+
+
+<app-footer></app-footer>

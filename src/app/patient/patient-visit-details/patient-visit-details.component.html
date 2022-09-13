@@ -1,0 +1,123 @@
+<div class="form-v10">
+	<div class="page-content">
+		<div class="form-v10-content">
+			<form class="form-detail" #visitForm="ngForm" (ngSubmit)="insertDetails(visitForm.value)">
+				<div class="form-left">
+					<h2>Admission information</h2>
+					<div class="form-row">
+						<select class="form-select" aria-label="Default select example">
+							<option selected>Patient Admisiion Type</option>
+							<option value="0">Judiciary</option>
+							<option value="1">Non Judiciary</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="patient_id" [disabled]="flag" ngModel id="patient_id"
+								class="input-text" placeholder="PatientId" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="hospital_id" [disabled]="flag" ngModel id="hospital_id"
+								class="input-text" placeholder="HospitalId" required>
+						</div>
+					</div>
+					<div class="form-row ">
+						<input type="text" name="bed_id" [disabled]="flag" ngModel id="bed_id" class="input-text"
+							placeholder="Bed Id" required>
+					</div>
+
+					<div class="form-row">
+						<label style="font: weight 1px;font-size:smaller" >&nbsp;Patient Admisiion Cause </label>
+						<select class="form-select" name="patient_admission_cause" [disabled]="flag" ngModel aria-label="Default select example">							
+							<option value="Injury">Injury</option>
+							<option value="Illness">Illness</option>
+							<option value="Maternity">Maternity</option>
+						</select>
+					</div>
+					<!-- should work only when injury is selected -->
+					<div class="form-row">
+						<label style="font: weight 1px;font-size:large" >&nbsp;Injury Cause </label>
+						<select class="form-select" [disabled]="flag" name="patient_injury_cause" ngModel
+							aria-label="Default select example">
+							<option value="Self-Inflicted">Self Inflicted</option>
+							<option value="Traffic_Accident">Traffic Accident</option>
+							<option value="substance_Abuse">substance Abuse</option>
+							<option value="Alcohol_Consumption">Alcohol Consumption</option>
+						</select>
+					</div>
+
+					<div class="form-row ">
+						<label style="font: weight 1px;font-size:large" >&nbsp;Patient Admitted Date </label>
+						<input type="date" name="patient_admission_cause_original_date" [disabled]="flag" ngModel
+							id="patient_admission_cause_original_date" class="input-text"
+							placeholder="Patient Admitted Date" required>
+					</div>
+
+					<div class="form-row">
+						<label style="font: weight 1px;font-size:large" >&nbsp;Patient Admission Medico Legal </label>
+						<select class="form-select" [disabled]="flag" name="patient_admission_medico_legal" ngModel
+							aria-label="Default select example">
+							<option value="1">Yes</option>
+							<option value="0">No</option>
+						</select>
+					</div>
+
+					<div class="form-row">
+						<label style="font: weight 1px;font-size:large" >&nbsp;Patient Admission Police Reported </label>
+						<select class="form-select" [disabled]="flag" name="patient_admission_police_reported" ngModel
+							aria-label="Default select example">
+							<option value="1">Yes</option>
+							<option value="0">No</option>
+						</select>
+					</div>
+
+					<div class="form-row">
+						<label style="font : weight 1px;font-size:large" >&nbsp;Patient Admission FIR Report </label>
+						<select class="form-select" [disabled]="flag" name="patient_admission_FIR_report" ngModel
+							aria-label="Default select example">
+							<option selected>Patient Admission FIR Report</option>
+							<option value="1">Yes</option>
+							<option value="0">No</option>
+						</select>
+					</div>
+
+					<div class="form-row">
+						<label style="font: weight 1px;font-size:large" >&nbsp;Patient Admission MLC Report </label>
+						<select class="form-select" [disabled]="flag" ngModel name="patient_admission_MLC_report"
+							aria-label="Default select example">
+							<option value="1">Yes</option>
+							<option value="0">No</option>
+						</select>
+					</div>
+					<div class="form-row">
+						<input type="text" name="patient_admission_system_of_medicine" ngModel [disabled]="flag"
+							id="patient_admission_system_of_medicine" name="patient_admission_system_of_medicine"
+							class="input-text" placeholder="Patient Admission System Of Medicine" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="patient_admission_primary_diagnosis" ngModel
+							id="patient_admission_primary_diagnosis" class="input-text"
+							placeholder="Patient Admission Primary Diagnosis" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="patient_admission_secondary_diagnosis" ngModel
+							id="patient_admission_secondary_diagnosis" class="input-text"
+							placeholder="patient Admission Secondary Diagnosis" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="patient_admission_comorbidities" ngModel
+							id="patient_admission_comorbidities" class="input-text"
+							placeholder="Patient Admission Comorbidities" required>
+					</div>
+
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="submit" (click)="opensweetalert()">
+
+
+
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

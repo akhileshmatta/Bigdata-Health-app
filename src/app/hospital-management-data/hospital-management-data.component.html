@@ -1,0 +1,195 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="form-v10-content">
+            <form class="form-detail" #searchForm="ngForm" (ngSubmit)="gethospitalInformation(searchForm.value)">
+                <div class="col-md-8">
+                    <div class="search">
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="form-control" name="hospital_id" ngModel id="hospital_id"
+                            placeholder="Enter hospital id" required>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            <!-- </form>
+            <div class="mt-5 col-6">
+                <table class="table table-bordered border-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">key</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" *ngFor="let key of keys">
+                            <td>{{key}}</td>
+                            <td>{{data[key]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> -->
+            <div class="row row-content m-5 border border-dark"  *ngIf="data.length != 0">
+                <div class="contain">
+                  <h2>Hospital Management Data </h2>
+                </div>
+                <br /><br /><br /><br />
+                <hr class="new" />
+                <div class="col-12 col-md-12">
+                  <div class="form-group row">
+                    <label for="hospital_id" class="col-md-2 col-form-label">
+                      hospital_id</label
+                    >
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="hospital_id"
+                        placeholder="{{ data.hospital_id }}"
+                      />
+                    </div>
+                  </div>
+                </div>
+                  <div class="col-12 col-md-12">
+                    <div class="form-group row">
+                      <label for="hospital_name" class="col-md-2 col-form-label">
+                        hospital_name</label>
+                      <div class="col-md-6">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="hospital_name"
+                          placeholder="{{ data.hospital_name}}"
+                        />
+                      </div>
+                    </div>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <div class="form-group row">
+                        <label
+                          for="hospital_address"
+                          class="col-md-2 col-form-label"
+                        >
+                          hospital_address</label
+                        >
+                        <div class="col-md-6">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="hospital_address"
+                            placeholder="{{ data.hospital_address }}"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                      <div class="col-12 col-md-12">
+                        <div class="form-group row">
+                          <label
+                            for="hospital_no_of_doctors"
+                            class="col-md-2 col-form-label"
+                          >
+                            No_of_doctors</label
+                          >
+                          <div class="col-md-6">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="hospital_no_of_doctors"
+                              placeholder="{{ data.hospital_no_of_doctors }}"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                        <div class="col-12 col-md-12">
+                          <div class="form-group row">
+                            <label
+                              for="hospital_no_of_inpatient_beds"
+                              class="col-md-2 col-form-label"
+                            >
+                              patient_beds</label
+                            >
+                            <div class="col-md-6">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="hospital_no_of_inpatient_beds"
+                                placeholder="{{ data.hospital_no_of_inpatient_beds }}"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                          <div class="col-12 col-md-12">
+                            <div class="form-group row">
+                              <label for="hospital_specialities" class="col-md-2 col-form-label">
+                                hospital_specialities</label
+                              >
+                              <div class="col-md-6">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="hospital_specialities"
+                                  placeholder="{{ data.hospital_specialities }}"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                            <div class="col-12 col-md-12">
+                              <div class="form-group row">
+                                <label
+                                  for="hospital_emergency_care"
+                                  class="col-md-2 col-form-label"
+                                >
+                                  emergency_care</label
+                                >
+                                <div class="col-md-6">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="hospital_emergency_care"
+                                    placeholder="{{ data.hospital_emergency_care}}"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                              <div class="col-12 col-md-12">
+                                <div class="form-group row">
+                                  <label
+                                    for="hospital_contact_phone"
+                                    class="col-md-2 col-form-label"
+                                  >
+                                     hospital_contact_No</label
+                                  >
+                                  <div class="col-md-6">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="hospital_contact_phone"
+                                      placeholder="{{
+                                        data.hospital_contact_phone
+                                      }}"
+                                    />
+
+                  
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-12">
+            <div class="form-group row">
+              <label
+                for="hospital_record_creation_time"
+                class="col-md-2 col-form-label"
+              >
+                record_creation_time</label
+              >
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="hospital_record_creation_time"
+                  placeholder="{{ data.hospital_record_creation_time}}"
+                />
+              </div>
+            </div>
+          
+        
+        </div>
+    

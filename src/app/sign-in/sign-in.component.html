@@ -1,0 +1,26 @@
+<app-header></app-header>
+<main>
+    <div class="container py-4">
+        <header class="pb-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                <span class="fs-41" >ACCESS PORTALS</span>
+            </a>
+        </header>
+
+        <div class="p-4 hospital mb-4 bg-light rounded-3 col-8">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">HOSPITAL  PORTAL</h1>
+                <p class="col-md-8 fs-4">Hospital Administration</p>
+                <button class="btn btn-secondary btn-lg" type="button" (click)="goTohospitallogin()">ACCESS</button>
+            </div>
+        </div>
+        <div class="p-4 insurance mx-4 bg-light rounded-3 col-8" style="float: right;">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">INSURANCE ACCESS PORTAL</h1>
+                <p class="col-md-8 fs-4">search for the patient details</p>
+                <button class="btn btn-secondary btn-lg" type="button" (click)="goToInsurancelogin()">ACCESS</button>
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

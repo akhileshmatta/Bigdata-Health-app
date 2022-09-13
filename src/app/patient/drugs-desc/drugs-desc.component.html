@@ -1,0 +1,139 @@
+<div class="form-v10">
+	<div class="page-content">
+		<div class="form-v10-content">
+			<form class="form-detail" #searchForm="ngForm" (ngSubmit)="showDrugs(searchForm.value)">
+				<div class="form-left">
+					<h2>Acquired drugs information</h2>
+					<div class="form-row">
+						<input type="text" name="patient_id"  ngModel id="patient_id" class="input-text" placeholder="PatientId" required>
+					</div>
+					<div class="form-row ">
+						<label style="font: weight 1px;font-size:large" >&nbsp;from date</label>
+						<input type="date" name="start_date" ngModel id="start_date" class="input-text" placeholder="start date" required>
+				    </div>
+                    <div class="form-row ">
+						<label style="font: weight 1px;font-size:large" >&nbsp;to date</label>
+						<input type="date" name="end_date" ngModel id="end_date" class="input-text" placeholder="End date" required>
+				    </div>
+                    <div class="form-row-last">
+						<input type="submit" name="register" class="register" value="submit">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<div class="mt-5" *ngIf="prescriptionDataFlag">
+	<h2>Prescribed Drugs</h2>
+	<table class="table table-bordered border-primary">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Prescription Id</th>
+				<th scope="col">Drug Id</th>
+				<th scope="col">Drug Name</th>
+				<th scope="col">Drug status</th>
+				<th scope="col">No of days</th>
+				<th scope="col">No of times a day</th>
+				<th scope="col">Prescribed date</th>
+				<th scope="col">Prescription dosage</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr scope="row" *ngFor="let inst of prescriptionData; let i = index;">
+			     <th scope ="col">{{i + 1}}</th>
+			     <th scope ="col">{{inst.prescription_id}}</th>
+			     <th scope ="col">{{inst.drug_id}}</th>
+			     <th scope ="col">{{inst.drug_name}}</th>
+				 <th scope ="col">{{inst.drug_status}}</th>
+			     <th scope ="col">{{inst.no_of_days}}</th>
+			     <th scope ="col">{{inst.no_of_times_a_day}}</th>
+			     <th scope ="col">{{inst.prescribed_date.slice(8, 10) + '-' + inst.prescribed_date.slice(5, 7) + '-' + inst.prescribed_date.slice(0, 4)}}</th>
+			     <th scope ="col">{{inst.prescription_dosage}}</th>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<div class="mt-5" *ngIf="dailyDataFlag">
+	<h2>Given Drugs</h2>
+	<table class="table table-bordered border-primary">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Prescription Id</th>
+				<th scope="col">Drug Id</th>
+				<th scope="col">Drug Name</th>
+				<th scope="col">Dosage</th>
+				<th scope="col">Date</th>
+				<th scope="col">Time</th>
+				<th scope="col">Medicines used</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr scope="row" *ngFor="let inst of dailyData; let i = index;">
+			     <th scope ="col">{{i + 1}}</th>
+			     <th scope ="col">{{inst.prescription_id}}</th>
+			     <th scope ="col">{{inst.drug_id}}</th>
+			     <th scope ="col">{{inst.drug_name}}</th>
+			     <th scope ="col">{{inst.prescription_dosage}}</th>
+			     <th scope ="col">{{inst.drug_event_date.slice(8, 10) + '-' + inst.drug_event_date.slice(5, 7) + '-' + inst.drug_event_date.slice(0, 4)}}</th>
+			     <th scope ="col">{{inst.drug_event_time}}</th>
+			     <th scope ="col">{{inst.acquired_medicines}}</th>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<div class="form-v10">
+	<div class="page-content">
+		<div class="form-v10-content"><form class="form-detail was-validated" #drugForm="ngForm" (ngSubmit)="getPrescriptionId(drugForm.value)">
+				<div class="form-left">
+					<h2>Drugs information</h2>
+					<!-- <div class="form-group"> -->
+					<div class="form-row">
+						<!-- <div class="form-row form-row-1"> -->
+						<input type="text" name="patient_id" ngModel id="patient_id" class="input-text"
+							placeholder="PatientId" required>
+						<!-- </div> -->
+					</div>
+					<div class="form-row ">
+						<label style="font: weight 1px;font-size:large" >&nbsp; date</label>
+						<input type="date" name="drug_event_date" ngModel id="drug_event_date"
+							class="input-text" placeholder="Medicine Given date" required>
+					</div>
+ 
+					<div class="form-row ">
+						<label style="font: weight 1px;font-size:large" >&nbsp; time</label>
+						<input type="time" name="drug_event_time" ngModel id="drug_event_time"
+							class="input-text" placeholder="Medicine given time" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="drug_id" ngModel id="drug_id" class="input-text" placeholder="Drug ID"
+							required>
+
+					</div>
+					<div class="form-row ">
+						<input type="text" name="prescription_dosage" ngModel id="prescription_dosage" class="input-text"
+							placeholder="Drug Dosage" required>
+					</div>
+					<div class="form-row ">
+						<input type="text" name="acquired_medicines" ngModel id="acquired_medicines" class="input-text"
+							placeholder="Acquired Medicines" required>
+					</div>
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="submit">
+					</div>
+				</div>
+			</form>
+		
+			
+		</div>
+	</div>
+</div>

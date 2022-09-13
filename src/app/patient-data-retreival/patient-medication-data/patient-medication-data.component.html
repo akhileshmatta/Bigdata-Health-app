@@ -1,0 +1,143 @@
+<div class="form-v10" >
+	<div class="page-content">
+		<div class="form-v10-content">
+			<form class="form-detail" #searchForm="ngForm" (ngSubmit)="show(searchForm.value)">
+				<div class="form-left">
+					<h2>information</h2>
+					<div class="form-row">
+						<input type="text" name="patient_id"  [(ngModel)]="patient_id" id="patient_id" class="input-text" placeholder="PatientId" required>
+					</div>
+					<div class="form-row ">
+						<label style="font: weight 1px;font-size:large" >&nbsp; from date</label>
+						<input type="date" name="start_date" ngModel id="start_date" class="input-text" placeholder="start date" required>
+				    </div>
+                    <div class="form-row ">
+						<label style="font: weight 1px;font-size:large" >&nbsp; to date</label>
+						<input type="date" name="end_date" ngModel id="end_date" class="input-text" placeholder="End date" required>
+				    </div>
+                     <input type ="submit" value="submit" >
+					
+				</div>
+			</form> 
+		</div>
+	</div>
+</div>
+
+<div class="m-5" *ngIf="dailyDataDrugFlag">
+	<h2>Drugs Data</h2>
+	<table class="table table-bordered table-striped table-hover table-dark">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Drug Name</th>
+				<th scope="col">Dosage</th>
+				<th scope="col">Date</th>
+				<th scope="col">Time</th>
+				<th scope="col">Medicines used</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr scope="row" *ngFor="let inst of dailyDataDrug; let i = index;">
+			     <th scope ="col">{{i + 1}}</th>
+			     <th scope ="col">{{inst.drug_name}}</th>
+			     <th scope ="col">{{inst.prescription_dosage}}</th>
+			     <th scope ="col">{{inst.drug_event_date.slice(8, 10) + '-' + inst.drug_event_date.slice(5, 7) + '-' + inst.drug_event_date.slice(0, 4)}}</th>
+			     <th scope ="col">{{inst.drug_event_time}}</th>
+			     <th scope ="col">{{inst.acquired_medicines}}</th>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="m-5" *ngIf="dailyDataSurgeryFlag">
+	<h2>Surgery data </h2>
+	<table class="table table-bordered table-striped table-hover table-dark">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Surgery Name</th>
+				<th scope="col">Doctor ID</th>
+				<th scope="col">Patient ID</th>
+				<th scope="col">Diagnostics Name</th>
+				<th scope="col">Surgery date</th>
+				<th scope="col">Hospital ID</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr scope="row" *ngFor="let inst of dailyDataSurgery; let i = index;">
+			     <th scope ="col">{{i + 1}}</th>
+			     <th scope ="col">{{inst.surgery_name}}</th>
+			     <th scope ="col">{{inst.doctor_id}}</th>
+			     <th scope ="col">{{inst.patient_id}}</th>
+			     <th scope ="col">{{inst.diagnostic_name}}</th>
+			     <th scope ="col">{{inst.surgery_date.slice(8, 10) + '-' + inst.surgery_date.slice(5, 7) + '-' + inst.surgery_date.slice(0, 4)}}</th>
+				 <th scope ="col">{{inst.hospital_id}}</th>
+			</tr>
+		</tbody>
+	</table>
+</div> 
+
+<div class="m-5" *ngIf="dailyDataProcedureFlag">
+	<h2>Procedures data</h2>
+	<table class="table table-bordered table-striped table-hover table-dark">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Procedure Name</th>
+				<th scope="col">Patient ID</th>
+				<th scope="col">Diagnostic Name</th>
+				<th scope="col">Procedure Date</th>
+				<th scope="col">Doctor ID</th>
+				<th scope="col">Hospital ID</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr scope="row" *ngFor="let inst of dailyDataProcedure; let i = index;">
+			     <th scope ="col">{{i + 1}}</th>
+			     <th scope ="col">{{inst.procedure_name}}</th>
+			     <th scope ="col">{{inst.patient_id}}</th>
+			     <th scope ="col">{{inst.diagnostic_name}}</th>
+			     <th scope ="col">{{inst.procedure_date.slice(8, 10) + '-' + inst.procedure_date.slice(5, 7) + '-' + inst.procedure_date.slice(0, 4)}}</th>
+			     <th scope ="col">{{inst.doctor_id}}</th>
+			     <th scope ="col">{{inst.hospital_id}}</th>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<div class="m-5" *ngIf="dailyDataDiagnosticsFlag">
+	<h2>Diagnostic data</h2>
+	<table class="table table-bordered table-striped table-hover table-dark" >
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">prescription id</th>
+				<th scope="col">lab Name</th>
+				<th scope="col">diagnostic Name</th>
+				<th scope="col">patient id</th>
+				<th scope="col">diagnostics test charges</th>
+				<th scope="col">diagnostics test parameter name</th>
+				<th scope="col">diagnostics test parameter value</th>
+				<th scope="col">diagnostic test date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr scope="row" *ngFor="let inst of dailyDataDiagnostics; let i = index;">
+			     <th scope ="col">{{i + 1}}</th>
+			     <th scope ="col">{{inst.prescription_id}}</th>
+			     <th scope ="col">{{inst.lab_name}}</th>
+			     <th scope ="col">{{inst.diagnostic_name}}</th>
+			     <th scope ="col">{{inst.patient_id}}</th>
+			     <th scope ="col">{{inst.diagnostics_test_charges}}</th>
+			     <th scope ="col">{{inst.diagnostics_test_parameter_name}}</th>
+			     <th scope ="col">{{inst.diagnostics_test_parameter_value}}</th>
+			     <th scope ="col">{{inst.diagnostic_test_date.slice(8, 10) + '-' + inst.diagnostic_test_date.slice(5, 7) + '-' + inst.diagnostic_test_date.slice(0, 4)}}</th>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<app-footer></app-footer>

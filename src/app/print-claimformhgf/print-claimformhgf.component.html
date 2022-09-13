@@ -1,0 +1,717 @@
+<p class="m-5" for="patient_id">Patient id</p>
+<input type="text" class="m-5" [(ngModel)]="patient_id" id="patient_id" placeholder="patient id">
+<br />
+<button (click)="process()" class="m-4 btn btn-secondary">Load claim form</button>
+<button  
+    class="btn btn-secondary m-4"
+    printSectionId="mytodosItemsId" 
+    printTitle="" 
+    styleSheetFile="assets/css/form.css"
+    ngxPrint 
+>Print claim form</button>
+  
+<div id="mytodosItemsId" >
+  
+ 
+
+ <form class="jotform-form" action="" method="post" name="form_221051473428450" id="221051473428450" accept-charset="utf-8" autocomplete="on">
+
+  <div id="background">
+    </div>
+    <div role="main" class="form-all">
+      <ul class="form-section page-section">
+        <li class="form-line form-line-column form-col-1" data-type="control_image" id="id_37">
+          <div id="cid_37" class="form-input-wide">
+            <div style="text-align:center">
+              <img alt=""  class="form-image" style="border:0" src="./assets/jntuk_logo.png" height="200px" width="330px" data-component="image" />
+            </div>
+          </div>
+        </li>
+        <li id="cid_1" class="form-input-wide" data-type="control_head">
+          <div class="form-header-group  header-large">
+            <div class="header-text httac htvam">
+              <h1 id="header_1" class="form-header" data-component="header" style="color: black;">
+                JNTUK HEALTH INSURANCE
+              </h1>
+              <div id="subHeader_1" class="form-subHeader">
+                Regd. &amp; Corporate Office:1, New Tank street, Valluvar kottam high road, Main road, Kakinada, Andhra Pradesh
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="form-line form-line-column form-col-2" data-type="control_text" id="id_35">
+          <div id="cid_35" class="form-input-wide">
+            <div id="text_35" class="form-html" data-component="text">
+              <p>           CIN : U66010TN25695  Email: <a href="mailto:Jntuksupport@gmail.com" rel="nofollow">Jntuksupport@gmail.com</a>   website:www.jntuk.in IRDAI Regn, No. 129</p>
+            </div>
+          </div>
+        </li>
+        
+        <li id="cid_3" class="form-input-wide" data-type="control_head">
+          <div class="form-header-group  header-default">
+            <div class="header-text httal htvam">
+              <h2 id="header_3" class="form-header" data-component="header" style="color: black;" >
+                CLAIM FORM- PART-A
+              </h2>
+              <div id="subHeader_3" class="form-subHeader">
+                TO BE FILLED IN BY THE INSURED
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_number" id="id_12">
+          <label class="form-label form-label-left form-label-auto" id="label_12" for="input_12"> Policy No. </label>
+          <div id="cid_12" class="form-input">
+            <input type="number" id="input_12" name="q12_policyNo" data-type="input-number" class=" form-number-input form-textbox" style="width:140px" size="15" placeholder="{{patient_master[0].patient_id}}" data-component="number" aria-labelledby="label_12" ngModel />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_78">
+          <label class="form-label form-label-left form-label-auto" id="label_78" for="input_78"> Company/ TPA/ID NO. </label>
+          <div id="cid_78" class="form-input">
+            <input placeholder="{{patient_master[0].patient_id}}" ngModel type="text" id="input_78" name="q78_companyTpaid78" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_78" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_fullname" id="id_11" data-compound-hint=",">
+          <label class="form-label form-label-left form-label-auto" id="label_11" for="first_11"> Name </label>
+          <div id="cid_11" class="form-input">
+            <div data-wrapper-react="true">
+              <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+                <input placeholder="{{patient_master[0].patient_first_name  }}" ngModel type="text" id="first_11" name="q11_name[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_11 given-name" size="10" value="" data-component="first" aria-labelledby="label_11 sublabel_11_first" />
+                <label class="form-sub-label" for="first_11" id="sublabel_11_first" style="min-height:13px" aria-hidden="false"> First Name </label>
+              </span>
+              <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
+                <input placeholder="{{ patient_master[0].patient_middle_name + ' ' + patient_master[0].patient_last_name}}" ngModel type="text" id="last_11" name="q11_name[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_11 family-name" size="15" value="" data-component="last" aria-labelledby="label_11 sublabel_11_last" />
+                <label class="form-sub-label" for="last_11" id="sublabel_11_last" style="min-height:13px" aria-hidden="false"> Last Name </label>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_address" id="id_19">
+          <label class="form-label form-label-left form-label-auto" id="label_19" for="input_19_addr_line1"> Address </label>
+          <div id="cid_19" class="form-input">
+            <div summary="" class="form-address-table jsTest-addressField">
+              <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+                <span class="form-address-line form-address-street-line jsTest-address-lineField">
+                  <span class="form-sub-label-container" style="vertical-align:top">
+                    <input placeholder="{{patient_master[0].patient_primary_address}}" ngModel type="text" id="input_19_addr_line1" name="q19_address[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_19 address-line1" value="" data-component="address_line_1" aria-labelledby="label_19 sublabel_19_addr_line1" required="" />
+                    <label class="form-sub-label" for="input_19_addr_line1" id="sublabel_19_addr_line1" style="min-height:13px" aria-hidden="false"> Street Address </label>
+                  </span>
+                </span>
+              </div>
+              <!-- <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+                <span class="form-address-line form-address-street-line jsTest-address-lineField">
+                  <span class="form-sub-label-container" style="vertical-align:top">
+                    <input type="text" id="input_19_addr_line2" name="q19_address[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_19 address-line2" value="" data-component="address_line_2" aria-labelledby="label_19 sublabel_19_addr_line2" />
+                    <label class="form-sub-label" for="input_19_addr_line2" id="sublabel_19_addr_line2" style="min-height:13px" aria-hidden="false"> Street Address Line 2 </label>
+                  </span>
+                </span>
+              </div> -->
+              <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+                <span class="form-address-line form-address-city-line jsTest-address-lineField ">
+                  <span class="form-sub-label-container" style="vertical-align:top">
+                    <input placeholder="{{address[0].address_city}}" ngModel type="text" id="input_19_city" name="q19_address[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_19 address-level2" value="" data-component="city" aria-labelledby="label_19 sublabel_19_city" required="" />
+                    <label class="form-sub-label" for="input_19_city" id="sublabel_19_city" style="min-height:13px" aria-hidden="false"> City </label>
+                  </span>
+                </span>
+                <span class="form-address-line form-address-state-line jsTest-address-lineField ">
+                  <span class="form-sub-label-container" style="vertical-align:top">
+                    <input placeholder="{{address[0].address_state}}" ngModel type="text" id="input_19_state" name="q19_address[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_19 address-level1" value="" data-component="state" aria-labelledby="label_19 sublabel_19_state" required="" />
+                    <label class="form-sub-label" for="input_19_state" id="sublabel_19_state" style="min-height:13px" aria-hidden="false"> State / Province </label>
+                  </span>
+                </span>
+              </div>
+              <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+                <span class="form-address-line form-address-zip-line jsTest-address-lineField ">
+                  <span class="form-sub-label-container" style="vertical-align:top">
+                    <input placeholder="{{address[0].address_zipcode}}" ngModel type="text" id="input_19_postal" name="q19_address[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_19 postal-code" value="" data-component="zip" aria-labelledby="label_19 sublabel_19_postal" required="" />
+                    <label class="form-sub-label" for="input_19_postal" id="sublabel_19_postal" style="min-height:13px" aria-hidden="false"> Postal / Zip Code </label>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+       
+        
+        <li id="cid_6" class="form-input-wide" data-type="control_head">
+          <div class="form-header-group  header-default">
+            <div class="header-text httal htvam">
+              <h2 id="header_6" class="form-header" data-component="header" style="color: black;">
+                DETAILS OF INSURANCE HISTORY
+              </h2>
+            </div>
+          </div>
+        </li> 
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Currently covered by any another company </label>
+          <div id="cid_14" class="form-input">
+            <label>Yes</label>
+            <input placeholder="" ngModel type="checkbox" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" /> &nbsp; &nbsp;
+            <label>No</label>
+            <input placeholder="" ngModel type="checkbox" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> If yes, company name </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+            <label>Policy No.</label>
+            <input type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Sum Insured </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14">Have you been in the hospital for last 4 years </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+           
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Previously covered by any another Mediclaim/Health insurance </label>
+          <div id="cid_14" class="form-input">
+            <label>Yes</label>
+            <input placeholder="" ngModel type="checkbox" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" /> &nbsp;
+            <label>No</label>
+            <input placeholder="" ngModel type="checkbox" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" /><br>
+
+            <label>If yes, Company name</label>
+            <input placeholder="" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+
+          </div>
+        </li>
+
+        <li id="cid_40" class="form-input-wide" data-type="control_head">
+          <div class="form-header-group  header-default">
+            <div class="header-text httal htvam">
+              <h2 id="header_40" class="form-header" data-component="header" style="color: black;">
+                DETAILS OF INSURED PERSON HOSPITALIZED
+              </h2>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_fullname" id="id_41">
+          <label class="form-label form-label-left form-label-auto" id="label_41" for="first_41"> Name </label>
+          <div id="cid_41" class="form-input">
+            <div data-wrapper-react="true">
+              <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+                <input placeholder="{{patient_master[0].patient_first_name  }}" ngModel type="text" id="first_41" name="q41_name41[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_41 given-name" size="10" value="" data-component="first" aria-labelledby="label_41 sublabel_41_first" />
+                <label class="form-sub-label" for="first_41" id="sublabel_41_first" style="min-height:13px" aria-hidden="false"> First Name </label> &nbsp;
+              </span>
+              <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
+                <input placeholder="{{ patient_master[0].patient_middle_name + ' ' + patient_master[0].patient_last_name}}" ngModel type="text" id="last_41" name="q41_name41[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_41 family-name" size="15" value="" data-component="last" aria-labelledby="label_41 sublabel_41_last" />
+                <label class="form-sub-label" for="last_41" id="sublabel_41_last" style="min-height:13px" aria-hidden="false"> Last Name </label>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Gender </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="{{patient_master[0].patient_gender}}" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+  
+          </div>
+        </li>
+        <li class="form-line" data-type="control_number" id="id_47">
+          <label class="form-label form-label-left form-label-auto" id="label_47" for="input_47"> AGE </label>
+          <div id="cid_47" class="form-input">
+            <input placeholder="{{patient_master[0].patient_dob}}" ngModel type="number" id="input_47" name="q47_age" data-type="input-number" class=" form-number-input form-textbox" data-defaultvalue="" style="width:140px" size="15" value="" placeholder="ex: 23" data-component="number" aria-labelledby="label_47" step="any" />
+          </div>
+        </li>
+        
+        <li class="form-line" data-type="control_radio" id="id_45">
+          <label class="form-label form-label-left form-label-auto" id="label_45" for="input_45"> OCCUPATION </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="{{patient_master[0].patient_occupation}}" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_address" id="id_43">
+          <label class="form-label form-label-left form-label-auto" id="label_43" for="input_43_addr_line1"> Address </label>
+          <div id="cid_43" class="form-input">
+            <div summary="" class="form-address-table jsTest-addressField">
+              <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+                <span class="form-address-line form-address-street-line jsTest-address-lineField">
+                  <span class="form-sub-label-container" style="vertical-align:top">
+                    <input type="text" id="input_43_addr_line1" name="q43_address43[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_43 address-line1" value="" data-component="address_line_1" aria-labelledby="label_43 sublabel_43_addr_line1" required="" />
+                    <label class="form-sub-label" for="input_43_addr_line1" id="sublabel_43_addr_line1" style="min-height:13px" aria-hidden="false"> Street Address </label>
+                  </span>
+                </span>
+              </div>
+             
+              <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+                <span class="form-address-line form-address-city-line jsTest-address-lineField ">
+                  <span class="form-sub-label-container" style="vertical-align:top">
+                    <input placeholder="{{address[0].address_city}}" ngModel type="text" id="input_43_city" name="q43_address43[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_43 address-level2" value="" data-component="city" aria-labelledby="label_43 sublabel_43_city" required="" />
+                    <label class="form-sub-label" for="input_43_city" id="sublabel_43_city" style="min-height:13px" aria-hidden="false"> City </label>
+                  </span>
+                </span>
+                <span class="form-address-line form-address-state-line jsTest-address-lineField ">
+                  <span class="form-sub-label-container" style="vertical-align:top">
+                    <input placeholder="{{address[0].address_state}}" ngModel type="text" id="input_43_state" name="q43_address43[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_43 address-level1" value="" data-component="state" aria-labelledby="label_43 sublabel_43_state" required="" />
+                    <label class="form-sub-label" for="input_43_state" id="sublabel_43_state" style="min-height:13px" aria-hidden="false"> State / Province </label>
+                  </span>
+                </span>
+              </div>
+              <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+                <span class="form-address-line form-address-zip-line jsTest-address-lineField ">
+                  <span class="form-sub-label-container" style="vertical-align:top">
+                    <input placeholder="{{address[0].address_zipcode}}" ngModel type="text" id="input_43_postal" name="q43_address43[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_43 postal-code" value="" data-component="zip" aria-labelledby="label_43 sublabel_43_postal" required="" />
+                    <label class="form-sub-label" for="input_43_postal" id="sublabel_43_postal" style="min-height:13px" aria-hidden="false"> Postal / Zip Code </label>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_email" id="id_42">
+          <label class="form-label form-label-left form-label-auto" id="label_42" for="input_42"> Email </label>
+          <div id="cid_42" class="form-input">
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <input placeholder="{{patient_master[0].patient_primary_email}}" ngModel type="email" id="input_42" name="q42_email" class="form-textbox validate[Email]" data-defaultvalue="" size="30" value="" data-component="email" aria-labelledby="label_42 sublabel_input_42" />
+              <label class="form-sub-label" for="input_42" id="sublabel_input_42" style="min-height:13px" aria-hidden="false"> example@example.com </label>
+            </span>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_phone" id="id_44">
+          <label class="form-label form-label-left form-label-auto" id="label_44" for="input_44_area"> Phone Number </label>
+          <div id="cid_44" class="form-input">
+            <div data-wrapper-react="true">
+              <span class="form-sub-label-container" style="vertical-align:top" data-input-type="areaCode">
+                <input type="tel" id="input_44_area" name="q44_phoneNumber[area]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_44 tel-area-code" value="" data-component="areaCode" aria-labelledby="label_44 sublabel_44_area" />
+                <span class="phone-separate" aria-hidden="true">
+                   -
+                </span>
+                <label class="form-sub-label" for="input_44_area" id="sublabel_44_area" style="min-height:13px" aria-hidden="false"> Area Code </label>
+              </span>
+              <span class="form-sub-label-container" style="vertical-align:top" data-input-type="phone">
+                <input type="tel" id="input_44_phone" name="q44_phoneNumber[phone]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_44 tel-local" value="" data-component="phone" aria-labelledby="label_44 sublabel_44_phone" />
+                <label class="form-sub-label" for="input_44_phone" id="sublabel_44_phone" style="min-height:13px" aria-hidden="false"> Phone Number </label>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li id="cid_4" class="form-input-wide" data-type="control_head">
+          <div class="form-header-group  header-default">
+            <div class="header-text httal htvam">
+              <h2 id="header_4" class="form-header" data-component="header" style="color: black;">
+                DETAILS OF HOSPITALIZATION
+              </h2>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_48">
+          <label class="form-label form-label-left form-label-auto" id="label_48" for="input_48"> Name of Hospital where Admitted </label>
+          <div id="cid_48" class="form-input">
+            <input placeholder="{{hospital_master[0].hospital_name}}" ngModel type="text" id="input_48" name="q48_nameOf" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_48" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_51">
+          <label class="form-label form-label-left form-label-auto" id="label_51" for="input_51"> Room Category occupied </label>
+          <div id="cid_51" class="form-input">
+            <input placeholder="{{hospital_room_cateogory[0].room_cateogory_description}}" ngModel type="text" id="input_51" name="q51_roomCategory" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_51" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_52">
+          <label class="form-label form-label-left form-label-auto" id="label_52" for="input_52"> Hospitalization due to </label>
+          <div id="cid_52" class="form-input">
+            <input placeholder="{{patient_visit_details[0].patient_admission_cause}}" ngModel type="text" id="input_52" name="q52_hospitalizationDue" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_52" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_53">
+          <label class="form-label form-label-left form-label-auto" id="label_53" for="input_53"> Date of injury/datedisease first detected/date ofdelivery: </label>
+          <div id="cid_53" class="form-input">
+            <input placeholder="{{patient_visit_details[0].admission_timestamp}}" ngModel type="text" id="input_53" name="q53_dateOfinjurydatedisease" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_53" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_54">
+          <label class="form-label form-label-left form-label-auto" id="label_54" for="input_54"> Date of admission: </label> 
+          <div id="cid_54" class="form-input">
+            <input placeholder="{{patient_visit_details[0].admission_timestamp}}" ngModel type="text" id="input_54" name="q54_typeA54" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_54" /> &nbsp;
+            <label class="form-label form-label-left form-label-auto" id="label_55" for="input_55"> Date of discharge: </label>
+          
+            <input placeholder="{{patient_visit_details[0].discharge_timestamp}}" ngModel type="text" id="input_55" name="q55_dateOf" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_55" />
+          
+          </div>
+        </li>
+        
+        <li class="form-line" data-type="control_textbox" id="id_56">
+          <label class="form-label form-label-left form-label-auto" id="label_56" for="input_56"> Time </label>
+          <div id="cid_56" class="form-input">
+            <input type="text" id="input_56" name="q56_typeA56" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_56" /> &nbsp;
+            <label class="form-label form-label-left form-label-auto" id="label_57" for="input_57"> If injury givecause: </label>
+            
+              <input placeholder="{{patient_visit_details[0].patient_injury_cause}}" ngModel type="text" id="input_57" name="q57_ifInjury" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_57" />
+            
+          </div>
+        </li>
+       
+        <li class="form-line" data-type="control_textbox" id="id_58">
+          <label class="form-label form-label-left form-label-auto" id="label_58" for="input_58"> If medico legal: </label>
+          <div id="cid_58" class="form-input">
+            <input  placeholder="{{patient_visit_details[0].patient_admission_medico_legal}}" ngModel type="text" id="input_58" name="q58_typeA58" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_58" /> &nbsp;
+            <label class="form-label form-label-left form-label-auto" id="label_59" for="input_59"> Reported to police: </label>
+          
+            <input placeholder="{{patient_visit_details[0].patient_admission_police_reported}}" ngModel type="text" id="input_59" name="q59_reportedTopolice" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_59" />
+          
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14">MLC report/police FIR attached </label>
+          <div id="cid_14" class="form-input">
+            <label>Yes</label>
+            <input placeholder="" ngModel type="checkbox" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" /> &nbsp;
+            <label>No</label>
+            <input placeholder="" ngModel type="checkbox" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" /><br>
+
+            
+          </div>
+        </li>
+        
+        
+        <li class="form-line" data-type="control_textbox" id="id_61">
+          <label class="form-label form-label-left form-label-auto" id="label_61" for="input_61"> System of medicine: </label>
+          <div id="cid_61" class="form-input">
+            <input placeholder="{{patient_visit_details[0].patient_admission_system_of_medicine}}" ngModel type="text" id="input_61" name="q61_systemOfmedicine" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_61" />
+          </div>
+        </li>
+        <li id="cid_5" class="form-input-wide" data-type="control_head">
+          <div class="form-header-group  header-default">
+            <div class="header-text httal htvam">
+              <h2 id="header_5" class="form-header" data-component="header" style="color: black;">
+                Details of Claim
+              </h2>
+              <div id="subHeader_5" class="form-subHeader">
+                Details of the treatment expenses claimed
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_number" id="id_62">
+          <label class="form-label form-label-left form-label-auto" id="label_62" for="input_62"> pre-hosptalization expenses </label>
+          <div id="cid_62" class="form-input">
+            <input placeholder="{{patient_expenses[0].patient_bill_amount}}" ngModel type="number" id="input_62" name="q62_prehosptalizationExpenses" data-type="input-number" class=" form-number-input form-textbox" data-defaultvalue="" style="width:140px" size="15" value="" placeholder="ex: 23" data-component="number" aria-labelledby="label_62" step="any" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_number" id="id_63">
+          <label class="form-label form-label-left form-label-auto" id="label_63" for="input_63"> Hospitalization Expenses: </label>
+          <div id="cid_63" class="form-input">
+            <input placeholder="{{patient_expenses[0].patient_bill_amount}}" ngModel type="number" id="input_63" name="q63_number63" data-type="input-number" class=" form-number-input form-textbox" data-defaultvalue="" style="width:140px" size="15" value="" placeholder="ex: 23" data-component="number" aria-labelledby="label_63" step="any" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_number" id="id_64">
+          <label class="form-label form-label-left form-label-auto" id="label_64" for="input_64"> Post hospitalizationExpenses: </label>
+          <div id="cid_64" class="form-input">
+            <input placeholder="{{patient_expenses[0].patient_bill_amount}}" ngModel type="number" id="input_64" name="q64_number64" data-type="input-number" class=" form-number-input form-textbox" data-defaultvalue="" style="width:140px" size="15" value="" placeholder="ex: 23" data-component="number" aria-labelledby="label_64" step="any" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_number" id="id_65">
+          <label class="form-label form-label-left form-label-auto" id="label_65" for="input_65"> Health-check up cost: </label>
+          <div id="cid_65" class="form-input">
+            <input placeholder="{{diagnostics_test_results[0].cost}}" ngModel type="number" id="input_65" name="q65_number65" data-type="input-number" class=" form-number-input form-textbox" data-defaultvalue="" style="width:140px" size="15" value="" placeholder="ex: 23" data-component="number" aria-labelledby="label_65" step="any" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_number" id="id_66">
+          <label class="form-label form-label-left form-label-auto" id="label_66" for="input_66"> Ambulance charges: </label>
+          <div id="cid_66" class="form-input">
+            <input placeholder="{{ambulance_utilization_details[0].ambulance_utilization_charges}}" ngModel type="number" id="input_66" name="q66_number66" data-type="input-number" class=" form-number-input form-textbox" data-defaultvalue="" style="width:140px" size="15" value="" placeholder="ex: 23" data-component="number" aria-labelledby="label_66" step="any" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_number" id="id_67">
+          <label class="form-label form-label-left form-label-auto" id="label_67" for="input_67"> Others(code): </label>
+          <div id="cid_67" class="form-input">
+            <input type="number" id="input_67" name="q67_number67" data-type="input-number" class=" form-number-input form-textbox" data-defaultvalue="" style="width:140px" size="15" value="" placeholder="ex: 23" data-component="number" aria-labelledby="label_67" step="any" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_number" id="id_68">
+          <label class="form-label form-label-left form-label-auto" id="label_68" for="input_68"> Total </label>
+          <div id="cid_68" class="form-input">
+            <input  placeholder="{{ +patient_expenses[0].patient_bill_amount + +ambulance_utilization_details[0].ambulance_utilization_charges + +diagnostics_test_results[0].cost
+                + +patient_expenses[0].patient_bill_amount }}" ngModel type="number" id="input_68" name="q68_number68" data-type="input-number" class=" form-number-input form-textbox" data-defaultvalue="" style="width:140px" size="15" value="" placeholder="ex: 23" data-component="number" aria-labelledby="label_68" step="any" />
+          </div>
+        </li>
+        <li id="cid_69" class="form-input-wide" data-type="control_head">
+          <div class="form-header-group  header-default">
+            <div class="header-text httal htvam">
+              <h2 id="header_69" class="form-header" data-component="header" style="color: black;">
+                Claim Documents submitted: check-list
+              </h2>
+            </div>
+          </div>
+        </li>
+
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Claim Form Duly signed </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="{{+(discharge_status[0].claim_form_duly_signed) === 1 ? 'Submitted' : 'Not Submitted' }}" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Copy of claim intimation</label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="{{+discharge_status[0].original_pre_authorization_request === 1 ? 'Submitted' : 'Not Submitted'}}" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Hospital Main Bill </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="{{+discharge_status[0].hospital_main_bill === 1 ? 'Submitted' : 'Not Submitted' }}" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Hospital Breakup Bill </label>
+          <div id="cid_14" class="form-input">
+            <input  placeholder="{{+discharge_status[0].hospital_break_up_bill === 1 ? 'Submitted' : 'Not Submitted' }}" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Hospital Bill Payment Receipt </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="{{+discharge_status[0].original_pre_authorization_request === 1 ? 'Submitted' : 'Not Submitted'}}" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Hospital Discharge Summary </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="{{+discharge_status[0].hospital_discharge_summary === 1 ? 'Submitted' : 'Not Submitted' }}" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Pharmacy Bill </label>
+          <div id="cid_14" class="form-input">
+            <input  placeholder="{{+discharge_status[0].pharmacy_bills === 1 ? 'Submitted' : 'Not Submitted' }}" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Operation Theatre Notes </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="{{+discharge_status[0].operation_theatre_notes === 1 ? 'Submitted' : 'Not Submitted' }}" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Doctor's request for investigation </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="{{+discharge_status[0].doctors_reference_slip_for_investigation === 1 ? 'Submitted' : 'Not Submitted' }}" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> ECG </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="{{+discharge_status[0].ecg === 1 ? 'Submitted' : 'Not Submitted' }}" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Investigation Reports(including CT/MRI/USG/HPE) </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="{{+discharge_status[0].ct_mr_usg_hpe_investigation_reports === 1 ? 'Submitted' : 'Not Submitted' }}" ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> Doctor's Prescription </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="{{+discharge_status[0].original_pre_authorization_request === 1 ? 'Submitted' : 'Not Submitted'}}"  ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_14">
+          <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14"> others </label>
+          <div id="cid_14" class="form-input">
+            <input placeholder="{{+discharge_status[0].any_other === 1 ? 'Submitted' : 'Not Submitted' }}"  ngModel type="text" id="input_14" name="q14_gender" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_14" />
+          </div>
+        </li>
+
+        <li id="cid_69" class="form-input-wide" data-type="control_head">
+          <div class="form-header-group  header-default">
+            <div class="header-text httal htvam">
+              <h2 id="header_69" class="form-header" data-component="header" style="color: black;">
+                Details Of Bills Enclosed:
+              </h2>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_81">
+          <table>
+              <tr>
+                  <th>
+                      Sl. No
+                  </th>
+                  <th style="width: 10cm;">
+                      Bill No
+                  </th>
+                  <th style="width: 10cm;" colspan="6">
+                      Date
+                  </th>
+                  <th style="width: 10cm;">
+                      Issued By
+                  </th>
+                  <th style="width: 10cm;">
+                      Towards
+                  </th>
+                  <th style="width: 10cm;" colspan="7">
+                      Amount(Rs)
+                  </th>
+              </tr>
+              <tr>
+                  <td>
+                      1
+                  </td>
+                  <td>{{patient_expenses[0].patient_bill_id}}</td>
+                  <td>{{patient_expenses[0].patient_bill_claim_date.slice(0,1)}}</td>
+                  <td>{{patient_expenses[0].patient_bill_claim_date.slice(1,2)}}</td>
+                  <td>{{patient_expenses[0].patient_bill_claim_date.slice(5,6)}}</td>
+                  <td>{{patient_expenses[0].patient_bill_claim_date.slice(6,7)}}</td>
+                  <td>{{patient_expenses[0].patient_bill_claim_date.slice(8,9)}}</td>
+                  <td>{{patient_expenses[0].patient_bill_claim_date.slice(9,10)}}</td>
+                  <td>{{patient_expenses[0].patient_bill_issued_by}}</td>
+                  <td >
+                      Hospital Main Bill:
+                      {{patient_expenses[0].patient_id}}
+  
+                      <label class="aa2" for="bil">Pre-Hospitalisation Bills:</label><br>
+                      <input class="aa11" type="text" name="bil" placeholder="{{patient_expenses[0].patient_bill_amount}}">Nos<br>
+  
+                      <label class="aa2" for="bil">Post-Hospitalisation Bills:</label><br>
+                      <input class="aa11" type="text" name="bil" placeholder="{{ambulance_utilization_details[0].ambulance_utilization_charges}}">Nos<br>
+                  </td>
+                  <td>{{patient_expenses[0].patient_bill_amount}}</td>
+              
+              </tr>
+              <tr>
+                  <td>
+                      2
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                      
+                  </td>
+                  <td></td>
+               
+              </tr>
+              <tr>
+                  <td>
+                      3
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                   </td>
+                  <td></td>
+                  
+              </tr>
+              <tr>
+                  <td>
+                      4
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    
+                  </td>
+                  <td></td>
+                  
+              </tr>
+              <tr>
+                  <td>
+                      5
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                  </td>
+                  <td></td>
+                 
+              </tr>
+              <tr>
+                  <td>
+                      6
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                 
+              </tr>
+              
+             
+          </table>
+          
+        </li>
+        <li id="cid_72" class="form-input-wide" data-type="control_head">
+          <div class="form-header-group  header-default">
+            <div class="header-text httal htvam">
+              <h2 id="header_72" class="form-header" data-component="header" style="color: black;">
+                Details Of Primary Insured&#x27;s Bank Account:
+              </h2>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_81">
+          <label class="form-label form-label-left form-label-auto" id="label_81" for="input_81"> PAN </label>
+          <div id="cid_81" class="form-input">
+            <input  placeholder="{{patient_master_dup[0].patient_pan_number}}" ngModel type="text" id="input_81" name="q81_pan81" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_81" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_80">
+          <label class="form-label form-label-left form-label-auto" id="label_80" for="input_80"> BANK ACCOUNT NUMBER </label>
+          <div id="cid_80" class="form-input">
+            <input placeholder="{{patient_master_dup[0].bank_account_number}}" ngModel type="text" id="input_80" name="q80_bankAccount" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_80" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_82">
+          <label class="form-label form-label-left form-label-auto" id="label_82" for="input_82"> Bank Name And Branch: </label>
+          <div id="cid_82" class="form-input">
+            <input placeholder="{{patient_master_dup[0].bank_name +''+patient_master[0].branch_name}}" ngModel type="text" id="input_82" name="q82_bankName" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_82" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_76">
+          <label class="form-label form-label-left form-label-auto" id="label_76" for="input_76"> Cheque/DDPayable Details: </label>
+          <div id="cid_76" class="form-input">
+            <input type="text" id="input_76" name="q76_typeA76" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_76" />
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_77">
+          <label class="form-label form-label-left form-label-auto" id="label_77" for="input_77"> IFSC CODE </label>
+          <div id="cid_77" class="form-input">
+            <input placeholder="{{patient_master_dup[0].ifsc_code}}" ngModel type="text" id="input_77" name="q77_ifscCode" data-type="input-textbox" class="form-textbox" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_77" />
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="background">
+    </div>
+  
+  </form>
+</div>

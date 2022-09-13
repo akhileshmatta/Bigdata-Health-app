@@ -1,0 +1,184 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row height d-flex justify-content-center align-items-center">
+    <div class="form-v10-content">
+      <form
+        class="form-detail"
+        #searchForm="ngForm"
+        (ngSubmit)="getPatientInformation(searchForm.value)"
+      >
+        <div class="col-md-8">
+          <div class="search"> 
+            <i class="fa fa-search"></i>
+            <input
+              type="text"
+              class="form-control"
+              name="patientId"
+              ngModel
+              id="patientId"
+              placeholder="Enter patient id"
+              required
+            />
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </form>
+      <!-- <div class="mt-5 col-6">
+                <table class="table table-bordered border-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">key</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" *ngFor="let key of keys">
+                            <td>{{key}}</td>
+                            <td>{{data[key]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> -->
+      <div class="row row-content m-5 border border-dark" *ngIf="data.length != 0">
+        <div class="contain">
+          <h2>Ambulance Info</h2>
+        </div>
+        <br /><br /><br /><br />
+        <hr class="new" />
+        <div class="col-12 col-md-9">
+          <div class="form-group row">
+            <label for="ambulance_id" class="col-md-2 col-form-label">
+              Ambulance_id</label
+            >
+            <div class="col-md-10">
+              <input
+                type="text"
+                class="form-control"
+                id="ambulance_id"
+                placeholder="{{ data.ambulance_id }}"
+              />
+            </div>
+          </div>
+        </div>
+          <div class="col-12 col-md-9">
+            <div class="form-group row">
+              <label for="patient_id" class="col-md-2 col-form-label">
+                Patient_id</label>
+              <div class="col-md-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="patient_id"
+                  placeholder="{{ data.patient_id }}"
+                />
+              </div>
+            </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="form-group row">
+                <label
+                  for="ambulance_used_from"
+                  class="col-md-2 col-form-label"
+                >
+                  Used_from</label
+                >
+                <div class="col-md-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="ambulance_used_from"
+                    placeholder="{{ data.ambulance_used_from }}"
+                  />
+                </div>
+              </div>
+            </div>
+              <div class="col-12 col-md-9">
+                <div class="form-group row">
+                  <label
+                    for="ambulance_used_to"
+                    class="col-md-2 col-form-label"
+                  >
+                    Used_to</label
+                  >
+                  <div class="col-md-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="ambulance_used_to"
+                      placeholder="{{ data.ambulance_used_to }}"
+                    />
+                  </div>
+                </div>
+              </div>
+                <div class="col-12 col-md-9">
+                  <div class="form-group row">
+                    <label
+                      for="ambulance_utilization_charges"
+                      class="col-md-2 col-form-label"
+                    >
+                      Utilization_charges</label
+                    >
+                    <div class="col-md-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="ambulance_utilization_charges"
+                        placeholder="{{ data.ambulance_utilization_charges }}"
+                      />
+                    </div>
+                  </div>
+                </div>
+                  <div class="col-12 col-md-9">
+                    <div class="form-group row">
+                      <label for="create_time" class="col-md-2 col-form-label">
+                        Create_time</label
+                      >
+                      <div class="col-md-10">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="create_time"
+                          placeholder="{{ data.create_time }}"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                    <div class="col-12 col-md-9">
+                      <div class="form-group row">
+                        <label
+                          for="ambulance_hospistal_id"
+                          class="col-md-2 col-form-label"
+                        >
+                          Ambulance_hosp_id</label
+                        >
+                        <div class="col-md-10">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="ambulance_hospistal_id"
+                            placeholder="{{ data.ambulance_hospistal_id }}"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                      <div class="col-12 col-md-9">
+                        <div class="form-group row">
+                          <label
+                            for="ambulance_registration_number"
+                            class="col-md-2 col-form-label"
+                          >
+                            Ambulance_Reg_No.</label
+                          >
+                          <div class="col-md-10">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="ambulance_registration_number"
+                              placeholder="{{
+                                data.ambulance_registration_number
+                              }}"
+                            />
+          
+    </div>
+  </div>
+</div>

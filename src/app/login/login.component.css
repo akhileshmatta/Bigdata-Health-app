@@ -1,0 +1,196 @@
+.box {
+    width: 500px;
+    margin: 150px 0;
+  }
+  
+  .shape1{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: #0074d9;
+    border-radius: 80px;
+    float: left;
+    margin-right: -50px;
+  }
+  .shape2 {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: #0074d9;
+    border-radius: 80px;
+    margin-top: -30px;
+    float: left;
+  }
+  .shape3 {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: #0074d9;
+    border-radius: 80px;
+    margin-top: -30px;
+    float: left;
+    margin-left: -31px;
+  }
+  .shape4 {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: #0074d9;
+    border-radius: 80px;
+    margin-top: -25px;
+    float: left;
+    margin-left: -32px;
+  }
+  .shape5 {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: #0074d9;
+    border-radius: 80px;
+    float: left;
+    margin-right: -48px;
+    margin-left: -32px;
+    margin-top: -30px;
+  }
+  .shape6 {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: #0074d9;
+    border-radius: 80px;
+    float: left;
+    margin-right: -20px;
+    margin-top: -35px;
+  }
+  .shape7 {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: #0074d9;
+    border-radius: 80px;
+    float: left;
+    margin-right: -20px;
+    margin-top: -57px;
+  }
+  .float {
+    width: 370px;
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .form {
+    margin-left: 145px;
+  }
+  
+  
+  
+  body, html {
+  height: 100%;
+  margin: 0;
+  }
+  .bm{
+  background-image: url("https://thumbs.dreamstime.com/b/healthcare-technology-doctor-using-digital-tablet-icon-medical-network-hospital-background-162019727.jpg");
+  background-repeat:repeat;
+  background-size: cover;
+  height:175%;
+  width:100%;
+  position:absolute;
+  
+  }
+  
+  
+  
+  .bg { 
+  /* The image used */
+  background-image: url("https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg");
+  
+  /* Full height */
+  height: 800px; 
+  width:150px;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+  
+  
+  }
+  
+  
+  .body {
+    background-image: url("https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg");
+  
+      /* Full height */
+    height: 800px; 
+    
+  
+    /* Center and scale the image nicely */
+    background-position: left top ;
+    background-repeat: no-repeat;
+    background-size: cover;
+      
+  }
+  .text{
+      font-size: 18px;
+      font-family: 'Lucida Sans';
+      font-weight:normal;
+      font-style: italic;
+      color: #000000;
+  }
+  .hd{
+      font-size:28px ;
+      font-family: monospace;
+      font-weight: bold;
+      font-style:oblique;
+    }
+    .c{
+        height:550px;
+    }
+    .ca{
+        height:500px;
+    }
+    
+  
+  @import url(https://fonts.googleapis.com/css?family=Roboto:700);
+  html, body{background : #FBC02D; font-family : Roboto; height: 100%; width: 100%; margin: 0;}
+  .button {
+  background: #3D4C53;
+  margin : 20px auto;
+  width : 300px;
+  height : 50px;
+  overflow: hidden;
+  text-align : center;
+  transition : .2s;
+  cursor : pointer;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+  }
+  .btnTwo {
+  position : relative;
+  width : 200px;
+  height : 100px;
+  margin-top: -100px;
+  padding-top: 2px;
+  background : #26A69A;
+  left : -250px;
+  transition : .3s;
+  }
+  .btnText {
+  color : white;
+  transition : .3s;
+  }
+  .btnText2 {
+  margin-top : 63px;
+  margin-right : -130px;
+  color : #FFF;
+  }
+  .button:hover .btnTwo{ /*When hovering over .button change .btnTwo*/
+  left: -130px;
+  }
+  .button:hover .btnText{ /*When hovering over .button change .btnText*/
+  margin-left : 65px;
+  }
+  .button:active { /*Clicked and held*/
+  box-shadow: 0px 5px 6px rgba(0,0,0,0.3);
+  }

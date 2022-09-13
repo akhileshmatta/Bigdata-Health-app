@@ -1,0 +1,237 @@
+<div class="form-v10">
+	<div class="page-content">
+		<div class="form-v10-content">
+			<form class="form-detail" #registerForm="ngForm" (ngSubmit)="userRegister(registerForm.value)">
+				<div class="form-left">
+					<h2>General Infomation</h2>
+					<div class="form-row form-row">
+						<input type="text" name="patient_first_name" ngModel id="patient_first_name" class="input-text"
+							placeholder="First Name" required>
+					</div>
+					<div class="form-row form-row">
+						<input type="text" name="patient_middle_name" ngModel id="patient_middle_name" class="input-text"
+							placeholder="Middle Name" required>
+					</div>
+					<div class="form-row form-row">
+						<input type="text" name="patient_last_name" ngModel id="patient_last_name" class="input-text"
+							placeholder="last Name" required>
+					</div>
+
+					<div class="form-row ">
+						<input type="date" name="patient_dob" ngModel id="patient_dob" class="input-text" placeholder="Date of birth" required>
+					</div>
+					<div class="form-row ">
+						<label style="font: weight 1px;font-size:smaller" >&nbsp; email type</label>
+						 <select name="email_type" ngModel id="email_type" class="form-select" aria-label="Default">
+							<option value="PRIMARY">PRIMARY</option>
+							<option value="SECONDARY">SECONDARY</option>
+							<option value="OFFICE">OFFICE</option>
+						</select> 
+					</div>
+					<div class="form-row ">
+						<input type="email" name="patient_primary_email" ngModel id="patient_primary_email" class="input-text" placeholder="email"
+							required>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="code" class="code" ngModel id="code" placeholder="Code +" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="patient_phone_number" class="phone" ngModel id="patient_phone_number" placeholder="Phone Number"
+								required>
+						</div>
+					</div>
+					<div class="form-row">
+						<label style="font: weight 1px;font-size:smaller" >&nbsp; Gender</label>
+						<select name="patient_gender" class="form-select" ngModel aria-label="Default select example">
+							<option value="m">Male</option>
+							<option value="f">Female</option>
+							<option value="o">Other</option>
+						</select>
+					</div>
+					<div class="form-row">
+						<label style="font: weight 1px;font-size:smaller" >&nbsp; address type</label>
+						<select name="address_type" class="form-select" ngModel  aria-label="Default select example">
+							<option value="PRIMARY">PRIMARY</option>
+							<option value="SECONDARY">SECONDARY</option>
+							<option value="OFFICE">OFFICE</option>
+						</select> 
+					</div>					
+					<div class="form-row ">
+						<input type="text" name="address_street_1" ngModel id="address_street_1" class="input-text" placeholder="Street Name"
+							required>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="address_building_no"  ngModel id="address_building_no" placeholder="Building number" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="address_area"  ngModel id="address_area" placeholder="Area"
+								required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="address_city"  ngModel id="address_city" placeholder="City" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="address_zipcode" ngModel id="address_zipcode" placeholder="Zipcode" required>
+						</div>
+					</div>
+
+					<div class="form-row ">
+						<input type="text" name="address_state" ngModel id="address_state" class="input-text" placeholder="state"
+							required>
+					</div>
+				
+					<div class="form-row ">
+						<input type="text" name="patient_primary_address" ngModel id="patient_primary_address" class="input-text" placeholder="Address"
+							required>
+					</div>
+					<div class="form-row ">
+						<input type="text" name="patient_pan_number" ngModel id="patient_pan_number" class="input-text" placeholder="PAN" required>
+					</div>
+					<div class="form-row ">
+						<input type="text" name="patient_voter_id" ngModel id="patient_voter_id" class="input-text" placeholder="Voter id" required>
+					</div>
+					<div class="form-row ">
+						<input type="text" name="patient_aadhar" ngModel id="patient_aadhar" class="input-text" placeholder="Aadhar Number" required>
+					</div>
+					<div class="form-row ">
+						<input type="text" name="patient_occupation" ngModel id="patient_occupation" class="input-text" placeholder="occupation" required>
+					</div>
+					<div class="form-row ">
+						<input type="text" name="InsuranceID" ngModel id="InsuranceID" class="input-text" placeholder="InsuranceID" required>
+					</div>
+					<div class="form-row ">
+						<input type="number" name="bank_account_number" ngModel id="bank_account_number" class="input-text" placeholder="BANK ACCOUNT NUMBER" required>
+					</div>
+					<div class="form-row ">
+						<input type="text" name="ifsc_code" ngModel id="ifsc_code" class="input-text" placeholder="IFSC CODE" required>
+					</div>
+					<div class="form-row ">
+						<input type="text" name="bank_name" ngModel id="bank_name" class="input-text" placeholder="BANK NAME" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="branch_name" class="input-text" ngModel id="branch_name" placeholder="BRANCH NAME" required>
+					</div>
+				</div>
+				<div class="form-right">
+					<h2>PRIMARY VITALS</h2>
+					<!-- <div class="form-row">
+						<input type="number" name="Age" ngModel id="Age" class="input-text" placeholder="age" required>
+					</div> -->
+					<div class="form-row">
+						<input type="text" name="hospital_id" ngModel id="hospital_id" placeholder="hospital id" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="doctor_id" ngModel id="doctor_id" placeholder="doctor id" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="event_id" ngModel id="event_id" placeholder="event id" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="blood_pressure_systolic" ngModel id="blood_pressure_systolic" placeholder="blood pressure systolic" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="blood_pressure_diastolic" ngModel id="blood_pressure_diastolic" placeholder="blood pressure Diastolic" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="height" class="height" ngModel id="height" placeholder="height"
+							required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="weight" class="weight" ngModel id="weight" placeholder="weight"
+							required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="heartbeat" class="heartbeat" ngModel id="heartbeat"
+							placeholder="heartbeat" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="temperature" class="temperature" ngModel id="temperature"
+							placeholder="temperature" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="sugar" class="sugar" ngModel id="sugar" placeholder="sugar" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="respiration" class="respiration" ngModel id="respiration"
+							placeholder="Respiration" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="recorder_name" class="recorder_name" ngModel id="recorder_name"
+							placeholder="Recorder Name" required>
+					</div>
+					<div class="form-row">
+						<label style="font: weight 1px;font-size:large" class="text-white" >&nbsp; recorded date</label>
+						<input type="date" name="recorded_date" class="recorded_date" ngModel id="recorded_date"
+							placeholder="Recorded Date" required>
+					</div>
+					<div class="form-row">
+						<label style="font: weight 1px;font-size:smaller" class="text-white" >&nbsp; recorded time</label>
+						<input type="time" name="recorded_time" ngModel id="recorded_time"
+							placeholder="Recorded Time" required>
+					</div>
+
+
+					<div class="form-row">
+						<label style="font: weight 1px;font-size:large" class="text-white" >&nbsp; Blood Group </label>
+						<select name="patient_blood_group" class="form-select" ngModel aria-label="Default select example">
+							<option value="1">O+</option>
+							<option value="2">A+</option>
+							<option value="3">B+</option>
+							<option value="4">AB+</option>
+							<option value="-1">O-</option>
+							<option value="-2">A-</option>
+							<option value="-3">B-</option>
+							<option value="-4">AB-</option>
+						</select>
+					</div>
+
+					<div class="form-row">
+						<label style="font: weight 1px;font-size:smaller "class="text-white" >&nbsp;patient allergy type </label>
+						<select name="patient_allergy_type" class="form-select" ngModel aria-label="Default select example">
+							<option value="GENERAL">GENERAL</option>
+							<option value="DRUG">DRUG</option>
+							<option value="CHEMICAL">CHEMICAL</option>
+						</select>
+						<span class="select-btn">
+							<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+
+					<div class="form-row">
+						<input type="text" name="allergy_id" class="allergy_id" ngModel id="allergy_id" placeholder="Allergy Id" required>
+					</div>
+
+					
+					
+					<div class="form-row">
+						<input type="date" name="allergy_start_date" class="allergy_start_date" ngModel id="allergy_start_date" placeholder="allergy Start Date" required>
+					</div>
+
+					<div class="form-row">
+						<input type="date" name="allergy_end_date" class="allergy_end_date" ngModel id="allergy_end_date" placeholder="Allergy End Date" required>
+					</div>
+
+					<div class="form-row">
+						<label style="font: weight 1px;font-size:large" class="text-white" >&nbsp;Is Allergy Still Active </label>
+						<select name="active_flag" ngModel class="form-select"  aria-label="Default select example">
+							<option value="1">Yes</option>
+							<option value="0">No</option>
+						</select>
+						<span class="select-btn">
+							<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="submit"  (click)="opensweetalert()">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,45 @@
+main{
+    /* background-image: url("https://thumbs.dreamstime.com/b/healthcare-technology-doctor-using-digital-tablet-icon-medical-network-hospital-background-162019727.jpg"); */
+    background-repeat:repeat-y;
+    background-size: cover;
+    height:1000px;
+  
+}
+.fs-4{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.fs-41{
+    font-family: 'playfair display';
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.hospital {
+    background-image: url("https://thumbs.dreamstime.com/b/healthcare-technology-doctor-using-digital-tablet-icon-medical-network-hospital-background-162019727.jpg");
+    box-shadow: 7px 7px 7px black; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.insurance {
+    background-image: url("https://social-innovation.hitachi/-/media/project/hitachi/sib/en/case_studies/dai-ichi-life/image/img_lead.jpg?la=en&upd=20181115101906Z&hash=7776782B31A521B3424F4B73A2F76540");
+    box-shadow: 7px 7px 7px black; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.display-5 {
+    font-family:serif;
+    color: crimson;
+}
+.btn{
+    background-color: rgb(68, 133, 68);
+    color: white;
+}
+.dropdown-menu{
+    background-color:white;
+}

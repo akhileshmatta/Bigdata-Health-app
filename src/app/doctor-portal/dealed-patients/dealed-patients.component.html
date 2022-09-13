@@ -1,0 +1,19 @@
+
+<table class="table table-bordered border-primary">
+    <thead>
+        <tr>
+            <th scope="col">Patient ID</th>
+            <th scope="col">Patient First name</th>
+            <th scope="col">Patient Middle name</th>
+            <th scope="col">Patient Last name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let inst of data">
+            <td scope="col"><input type="button" (click)="loadPatient(inst.patient_id)" class="btn btn-secondary" value="{{inst.patient_id}}" /></td>
+            <td scope="col">{{inst.patient_first_name}}</td>
+            <td scope="col">{{inst.patient_middle_name}}</td>
+            <td scope="col">{{inst.patient_last_name}}</td>
+        </tr>
+    </tbody>
+</table>

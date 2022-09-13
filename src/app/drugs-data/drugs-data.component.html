@@ -1,0 +1,164 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="form-v10-content">
+            <form class="form-detail" #searchForm="ngForm" (ngSubmit)="getpatientInformation(searchForm.value)">
+                <div class="col-md-8">
+                    <div class="search">
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="form-control" name="prescription_id" ngModel id="prescription_id"
+                            placeholder="Enter Prescription id" required>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </form>
+            <!-- <div class="mt-5 col-6">
+                <table class="table table-bordered border-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">key</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" *ngFor="let key of keys">
+                            <td>{{key}}</td>
+                            <td>{{data[key]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> -->
+            <div class="row row-content  m-5 border border-dark"   *ngIf="data.length != 0" >
+                <div class="contain">
+                    <h2>Drugs Info</h2>
+                  </div>
+                  <br /><br /><br /><br />
+                  <hr class="new" />
+                <div class="col-12 col-md-12" >
+                  
+                    <div class="form-group row">
+                      <label for="prescription_id" class="col-md-2 col-form-label" >
+                         prescription_id</label>
+                      <div class="col-md-6">
+                        <input disabled
+                          type="text"
+                          class="form-control"
+                          id="prescription_id"
+                          placeholder="{{data.prescription_id}}"                         
+                        />
+                        
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="drug_id" class="col-md-2 col-form-label">
+                           drug_id</label>
+                        <div class="col-md-6">
+                          <input disabled
+                            type="text"
+                            class="form-control"
+                            id="drug_id"
+                            placeholder="{{data.drug_id}}"                         
+                          />
+                          
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="prescription_dosage" class="col-md-2 col-form-label">
+                           prescription_dosage</label>
+                        <div class="col-md-6">
+                          <input disabled
+                            type="text"
+                            class="form-control"
+                            id="prescription_dosage"
+                            placeholder="{{data.prescription_dosage}}"                         
+                          />
+                          
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="prescription_drug_record_creation_time" class="col-md-2 col-form-label">
+                        drug_creation_time</label>
+                        <div class="col-md-6">
+                          <input disabled
+                            type="text"
+                            class="form-control"
+                            id="prescription_drug_record_creation_time"
+                            placeholder="{{data.prescription_drug_record_creation_time}}"                         
+                          />
+                          
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="drug_status" class="col-md-2 col-form-label">
+                          drug_status</label>
+                        <div class="col-md-6">
+                          <input disabled
+                            type="text"
+                            class="form-control"
+                            id="drug_status"
+                            placeholder="{{data.drug_status}}"                         
+                          />
+                          
+                        </div>
+                      </div>
+                     
+                      <div class="form-group row">
+                        <label for="no_of_times_a_day" class="col-md-2 col-form-label">
+                            no_of_times_a_day</label>
+                        <div class="col-md-6">
+                          <input disabled
+                            type="text"
+                            class="form-control"
+                            id="no_of_times_a_day"
+                            placeholder="{{data.no_of_times_a_day}}"                         
+                          />
+                          
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="no_of_days" class="col-md-2 col-form-label">
+                            no_of_days</label>
+                        <div class="col-md-6">
+                          <input disabled
+                            type="text"
+                            class="form-control"
+                            id="no_of_days"
+                            placeholder="{{data.no_of_days}}"                         
+                          />
+                          
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="end_date" class="col-md-2 col-form-label">
+                            end_date</label>
+                        <div class="col-md-6">
+                          <input disabled
+                            type="text"
+                            class="form-control"
+                            id="end_date"
+                            placeholder="{{data.end_date}}"                         
+                          />
+                          
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="prescribed_date" class="col-md-2 col-form-label">
+                            prescribed_date</label>
+                        <div class="col-md-6">
+                          <input disabled
+                            type="text"
+                            class="form-control"
+                            id="prescribed_date"
+                            placeholder="{{data.prescribed_date}}"                         
+                          />
+                          
+                        </div>
+                      </div>
+
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<app-footer></app-footer>

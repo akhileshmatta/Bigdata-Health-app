@@ -1,0 +1,172 @@
+<app-header></app-header>
+<div class="bm" *ngIf="isLoggedIn">
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+
+        <div class="col" *ngIf="bools[0]">
+            <div class="card mb-4 rounded-3 shadow-sm c">
+                <div class="card-header hd py-3">
+                    <h4 class="my-0 fw-normal">PATIENT'S PORTAL</h4>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-column shadow">
+                        <div class="mt-3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxXmyWmXOiQ6KDpbwn81jYx9-MvnhqNS7mslgWdaP8Yg0aC21Uc7Pn4KmvWMdlrWnjkWA&usqp=CAU" class="w-50 shadow" alt="cant load image">
+                        </div>
+                        <div class="text mt-3">
+                            <ul class="list-unstyled">
+                                <li>Enter patients' details with care</li>
+                                <li>search patients</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="w-50 btn btn-lg btn-outline-dark"(click)="goTopatientRegister()">Patient admittance</button>
+                    <button type="button" class="w-50 btn btn-lg btn-outline-dark"(click)="goTopatientdataretreival()">Patient data</button>                </div>
+            </div>
+        </div>
+
+        <div class="col" *ngIf="bools[1]">
+            <div class="card mb-4 rounded-3 shadow-sm c">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">DOCTOR'S PORTAL</h4>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-column shadow">
+                        <div class="mt-3">
+                            <img src="https://cdn.appdesign.dev/wp-content/uploads/2019/06/disen%CC%83o-web-para-me%CC%81dicos.png" title="" class="w-50 shadow" alt="cant load image">
+                        </div>
+                        <div class="text mt-3">
+                            <ul class="list-unstyled">
+                                <li>Doctor's login</li>
+                                <li>patient's dealed</li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                        <button type="button" class="w-100  btn btn-lg btn-outline-dark" (click)="goTodoctorlogin()" >SIGN-IN</button>
+                        
+                </div>
+            </div>
+        </div>
+
+        <div class="col" *ngIf="bools[2]">
+            <div class="card mb-4 rounded-3 shadow-sm c">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">DIAGNOSTIC'S PORTAL</h4>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-column shadow">
+                        <div class="mt-3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQagSe7BFuFndX5fajMJvv8Q5AXifCm6gnA5A&usqp=CAU" height="250px" class="w-75 shadow" alt="cant load image">
+                        </div>
+                        <div class="text mt-3">
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <!-- <li>Diagnostics rates</li> -->
+                                <li>Enter the diagnostics data</li>
+                                <li>Diagnostics results</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="w-50 btn btn-lg btn-outline-dark"(click)="goTodiagnosticdata()">Enter</button>
+                    <button type="button" class="w-50 btn btn-lg btn-outline-dark"(click)="goTodiagnosticsresults()">Display</button> 
+                </div>
+            </div>
+        </div>
+
+        <div class="col" *ngIf="bools[3]">
+            <div class="card mb-4 rounded-3 shadow-sm c">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">PRESCRIPTION PORTAL</h4>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-column shadow">
+                        <div class="mt-3">
+                            <img src="https://thumbs.dreamstime.com/b/miniature-doctor-writing-prescription-clipboard-whit-signature-rx-form-medical-pad-vector-illustration-flat-design-style-119494944.jpg" height="270px" class="w-75 shadow" alt="cant load image">
+                        </div>
+                        <div class="text mt-3">
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Drugs details</li>
+                                    <!-- <li>Drugs rates</li> -->
+                                </ul>
+                        </div>
+                    </div>
+                  
+                        <button type="button" class="w-100 mb-5 btn  btn-lg btn-outline-dark" (click)=" goTodrugsdata()" >Show</button>
+                        
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col" *ngIf="bools[4]">
+            <div class="card mb-4 rounded-3 shadow-sm c">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">PHARMACY PORTAL</h4>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-column shadow">
+                        <div class="mt-3"> 
+                            <img src="https://t4.ftcdn.net/jpg/02/74/73/01/360_F_274730109_gF0azWfAPbZFLr06yKbFu8S5CPSNMYJs.jpg" height="300px" class="w-75 shadow" alt="cant load image">
+                        </div>
+                        <div class="text mt-3">
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>collection of drugs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="w-50 btn btn-lg btn-outline-dark"(click)="goToadddrugs()">Add New drugs</button>
+                    <button type="button" class="w-50 btn btn-lg btn-outline-dark"(click)="goTodisplaydrugs()">Display Drugs data</button> 
+                </div>
+            </div>
+        </div>
+
+        <div class="col" *ngIf="bools[5]">
+            <div class="card mb-4 rounded-3 shadow-sm c">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">AMBULANCE PORTAL</h4>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-column shadow">
+                        <div class="mt-3">
+                            <img src="https://img.freepik.com/free-vector/emergency-ambulance-with-coronavirus-concept_23-2148534628.jpg" height="300px" class="w-75 shadow" alt="cant load image">
+                        </div>
+                        <div class="text mt-3">
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Ambulance Usage Details</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                        <button type="button" class="w-100 btn btn-lg  btn-outline-dark" (click)="goToambulancedata()">Show details</button>
+                        
+                     
+                </div>
+            </div>
+        </div>
+
+        <div class="col" *ngIf="bools[6]">
+            <div class="card mb-4 rounded-3 shadow-sm ca">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">HOSPITAL MANAGEMENT PORTAL</h4>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-column shadow">
+                        <div class="mt-3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvivMdv5LpOptCNMF1EUD5KvUQMX_oO0UMTJ7SutzPW2DdRXD-8_jQKJS8P47S_3cG1AM&usqp=CAU" height="250px" class="w-75 shadow" alt="cant load image">
+                        </div>
+                        <div class="text mt-3">
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Hospital Administration</li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                        <button type="button" class="w-100 btn btn-lg  btn-outline-dark" (click)="goTohospitalmanagementdata()" >Show</button>
+                       
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

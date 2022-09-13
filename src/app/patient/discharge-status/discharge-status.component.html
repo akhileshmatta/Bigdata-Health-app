@@ -1,0 +1,87 @@
+<div class="form-v10">
+    <div class="page-content">
+        <div class="form-v10-content">
+            <form class="form-detail">
+                <div class="form-left">
+                    <h2 class="aa0">Discharge information</h2>
+                    <div class="form-row form-row-1">
+                        <input type="text" name="patient_id" [(ngModel)]="patient_id" id="patient_id" class="input-text"
+                            placeholder="PatientId" required>
+                    </div>
+                    <div class="form-row">
+                        <select class="form-select" name="yes_or_no" [(ngModel)]="flag" aria-label="Default select example">
+                            <option value="0" selected>Is Patient Ready to discharge</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div> 
+    </div>
+</div>
+
+<app-loading *ngIf="loadingFlag"></app-loading>
+
+<div class="form-v10">
+    <div class="page-content">
+        <div class="form-v10-content">
+            <form class="row" *ngIf="flag == 1" #requirementForm="ngForm" (ngSubmit)="getRequirements(requirementForm.value)">
+                <h3 style="text-align: center;"><b>Claim Documents Submitted- Check List</b></h3>
+                <hr>
+                <div class="column">
+                      <input type="checkbox" ngModel id="claim_form_duly_signed" name="claim_form_duly_signed">
+                    <label for="duly">  <b>Claim Form Duly signed</b></label><br>
+                      <input type="checkbox" ngModel id="original_pre_authorization_request"
+                        name="original_pre_authorization_request">
+                    <label for="claim">  <b>Original pre-authorization Request</b></label><br>
+                      <input type="checkbox" ngModel id="copy_of_the_pre_authorization_approval_letter"
+                        name="copy_of_the_pre_authorization_approval_letter">
+                    <label for="main">  <b>Copy of the pre-authorization approval letter</b></label><br>
+                      <input type="checkbox" ngModel id="copy_of_photo_id_card_of_patient_verified_by_hospital"
+                        name="copy_of_photo_id_card_of_patient_verified_by_hospital">
+                    <label for="breakup"> <b>Copy of photo ID card of patient verified by hospital</b></label><br>
+                      <input type="checkbox" ngModel id="hospital_discharge_summary" name="hospital_discharge_summary">
+                    <label for="Payment">  <b>Hospital Discharge Summary</b></label><br>
+                      <input type="checkbox" ngModel id="operation_theatre_notes" name="operation_theatre_notes">
+                    <label for="discharge"> <b>Operation Theater Notes</b></label><br>
+                      <input type="checkbox" ngModel id="hospital_main_bill" name="hospital_main_bill">
+                    <label for="pharmacy"> <b>Hospital Main bill</b></label><br>
+                      <input type="checkbox" ngModel id="hospital_break_up_bill" name="hospital_break_up_bill">
+                    <label for="pharmacy"> <b>Hospital break-up bill</b></label><br>
+                </div>
+                <div class="column">
+                    <div class="block6">
+                        <input type="checkbox" ngModel id="investigation_reports" name="investigation_reports">
+                        <label for="operation"> <b>Investigation Reports</b></label><br>
+                        <input type="checkbox" ngModel id="ct_mr_usg_hpe_investigation_reports"
+                            name="ct_mr_usg_hpe_investigation_reports">
+                        <label for="doctor"> <b>CT/MRI/USG/HPE Investigation Reports</b></label><br>
+                        <input type="checkbox" ngModel id="doctors_reference_slip_for_investigation"
+                            name="doctors_reference_slip_for_investigation">
+                        <label for="ecg"> <b>Doctor's Reference slips for investigation</b></label><br>
+                        <input type="checkbox" ngModel id="ecg" name="ecg">
+                        <label for="investigation"> <b>ECG</b></label><br>
+                        <input type="checkbox" ngModel id="pharmacy_bills" name="pharmacy_bills">
+                        <label for="prescription"> <b>pharmacy bills</b></label><br>
+                        <input type="checkbox" ngModel id="mlc_report_and_police_fir" name="mlc_report_and_police_fir">
+                        <label for="prescription"> <b>MLC report & Police FIR</b></label><br>
+                        <input type="checkbox" ngModel id="original_death_summary_from_hospital_where_applicable"
+                            name="original_death_summary_from_hospital_where_applicable">
+                        <label for="prescription"><b> Original death summary from hospital where </b></label><br>
+                        <p><b>applicable</b></p>
+                        <label for="others"><b>Others</b>  </label>
+                        <input type="text" ngModel id="any_other" name="any_other">
+                    </div>
+                </div>
+                <br>
+                <div style="margin-left:40%" class="submit">
+                    <button type="submit btn" style="background-color: green; border-radius: 20px; color:white; padding:5px 15px" >Discharge</button>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+</div> 
+
+<button class="btn btn-primary" (click)="printClaimForm()">Print Claim form</button>

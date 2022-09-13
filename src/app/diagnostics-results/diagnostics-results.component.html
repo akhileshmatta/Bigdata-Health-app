@@ -1,0 +1,168 @@
+<!-- <div class="container">
+    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="form-v10-content">
+            <form class="form-detail" #searchForm="ngForm" (ngSubmit)="getPatientInformation(searchForm.value)">
+                <div class="col-md-8">
+                    <div class="search">
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="form-control" name="patientId" ngModel id="patientId"
+                            placeholder="Enter patient id" required>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </form>
+            <div class="mt-5 col-6">
+                <table class="table table-bordered border-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">key</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" *ngFor="let key of keys">
+                            <td>{{key}}</td>
+                            <td>{{data[key]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- <div class="container">
+    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="form-v10-content">
+            <form class="form-detail" #searchForm="ngForm" (ngSubmit)="getPatientInformation(searchForm.value)">
+                <div class="col-md-8">
+                    <div class="search">
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="form-control" name="patientId" ngModel id="patientId"
+                            placeholder="Enter patient id" required>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </form>
+            <div class="mt-5 col-6" *ngIf="data.length != 0">
+                <table class="table table-bordered border-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">key</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" *ngFor="let key of keys">
+                            <td>{{key}}</td>
+                            <td>{{data[0][key] || '---'}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered border-secondary">
+                    <thead>
+                        <tr>
+                            <th scope="col">Parameter name</th>
+                            <th scope="col">Parameter value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" *ngFor="let inst of data">
+                            <td>{{inst.diagnostics_test_parameter_name}}</td>
+                            <td>{{inst.diagnostics_test_parameter_value}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="container">
+    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="form-v10-content">
+            <form class="form-detail" #searchForm="ngForm" (ngSubmit)="getPatientInformation(searchForm.value)">
+                <div class="col-md-8">
+                    <div class="search">
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="form-control" name="patientId" ngModel id="patientId"
+                            placeholder="Enter patient id" required>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </form>
+            <!-- <div class="mt-5 col-6">
+                <table class="table table-bordered border-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">key</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" *ngFor="let key of keys">
+                            <td>{{key}}</td>
+                            <td>{{data[key]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> -->
+            <div class="row row-content m-5 border border-dark" *ngIf="data.length !=0 " >
+
+                <div class="contain">
+                  <h2>Diagnostics Results Information</h2>
+                </div>
+                <br /><br /><br /><br />
+                <hr class="new" />
+                <div class="col-12 col-md-9">
+                  <div class="form-group row" *ngFor="let key of keys">
+                    <label for="patient_dob" class="col-md-4 col-form-label">
+                      {{ key + ' : ' }}</label
+                    >
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="patient_dob"
+                        placeholder="{{ data[0][key] }}"
+                      />
+                    </div>
+                  </div><br><br>
+                  <label for="patient_dob" class="row-md-2 row-form-label" >
+                    Parameter Name(s) & Reading(s):</label
+                  >
+                  <div class="form-group row" *ngFor="let inst of data">
+                    
+                    <div class="row-md-10" style="padding-left: 300px;">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="patient_dob"
+                        placeholder="{{ inst.diagnostics_test_parameter_name + ' : ' + inst.diagnostics_test_parameter_value }}"
+                      />
+                      <!-- <div class="col-md-10">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="patient_"
+                          placeholder="{{ inst.diagnostics_test_parameter_value }}"
+                        />
+                      </div> -->
+                    </div>
+                    
+                  
+                 
+                    <!-- <label for="patient_dob" class="col-md-2 col-form-label" >
+                      diagnostics_test_parameter_value</label
+                    >
+                    <div class="col-md-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="patient_dob"
+                        placeholder="{{ inst.diagnostics_test_parameter_value }}"
+                      />
+                    </div>
+                  </div> -->
+                  
+        </div>
+    </div>
+</div>

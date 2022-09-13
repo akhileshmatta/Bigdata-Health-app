@@ -1,0 +1,307 @@
+<div class="container">
+  <div class="row height d-flex justify-content-center align-items-center">
+    <div class="form-v10-content">
+      <form
+        class="form-detail"
+        #searchForm="ngForm"
+        (ngSubmit)="getPatientInformation(searchForm.value)"
+      >
+        <div class="col-md-8">
+          <div class="search">
+            <i class="fa fa-search"></i>
+            <input 
+              type="text"
+              class="form-control"
+              name="patientId"
+              ngModel
+              id="patientId"
+              placeholder="Enter patient id"
+              required
+            />
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- <div class="mt-5 col-6">
+                <table class="table table-bordered border-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">key</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" *ngFor="let key of keys">
+                            <td>{{key}}</td>
+                            <td>{{data[key]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button (click)="printPage()">print</button>
+            </div> -->
+      <div class="row row-content m-5 border border-dark" *ngIf="flag">
+        <div class="contain">
+          <h2>Patient Info</h2>
+        </div>
+        <br /><br /><br /><br />
+        <hr class="new" />
+        <div class="col-12 col-md-12">
+          <div class="form-group row">
+            <label for="patient_id" class="col-md-2 col-form-label">
+              Patient_id</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="patient_id"
+                placeholder="{{ data.patient_id }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="patient_first_name" class="col-md-2 col-form-label">
+              Patient_first_name</label
+            >
+
+            <div class="col-md-6">
+              <input disabled
+                type="text"
+                class="form-control"
+                id="patient_first_name"
+                placeholder="{{ data.patient_first_name }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="patient_middle_name" class="col-md-2 col-form-label">
+              Patient_Middle_name</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="patient_middle_name"
+                placeholder="{{ data.patient_middle_name }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="patient_last_name" class="col-md-2 col-form-label">
+              Patient_last_name</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="patient_last_name"
+                placeholder="{{ data.patient_last_name }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="patient_dob" class="col-md-2 col-form-label">
+              DOB</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="patient_dob"
+                placeholder="{{ data.patient_dob }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="patient_gender" class="col-md-2 col-form-label">
+              Gender</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="patient_gender"
+                placeholder="{{ data.patient_gender }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="patient_blood_group" class="col-md-2 col-form-label">
+              Blood_Group</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="patient_blood_group"
+                placeholder="{{ data.patient_blood_group }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="patient_aadhar" class="col-md-2 col-form-label">
+              Aadhar No.</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="patient_aadhar"
+                placeholder="{{ data.patient_aadhar }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="patient_pan_number" class="col-md-2 col-form-label">
+              Pan_number</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="patient_pan_number"
+                placeholder="{{ data.patient_pan_number }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="patient_voter_id" class="col-md-2 col-form-label">
+              Voter_id</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="patient_voter_id"
+                placeholder="{{ data.patient_voter_id }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="patient_occupation" class="col-md-2 col-form-label">
+              Occupation</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="patient_occupation"
+                placeholder="{{ data.patient_occupation }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label
+              for="patient_primary_address"
+              class="col-md-2 col-form-label"
+            >
+              primary_Address</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="patient_primary_address"
+                placeholder="{{ data.patient_primary_address }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="patient_primary_email" class="col-md-2 col-form-label">
+              Primary_email</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="patient_primary_email"
+                placeholder="{{ data.patient_primary_email }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="record_creation_time" class="col-md-2 col-form-label">
+              Record_creation_Time</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="record_creation_time"
+                placeholder="{{ data.record_creation_time }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="InsuranceID" class="col-md-2 col-form-label">
+              Insurance_Id</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="InsuranceID"
+                placeholder="{{ data.InsuranceID }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="bank_name" class="col-md-2 col-form-label">
+              Bank_Name</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="bank_name"
+                placeholder="{{ data.bank_name }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="branch_name" class="col-md-2 col-form-label">
+              Branch_Name</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="branch_name"
+                placeholder="{{ data.branch_name }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="ifsc_code" class="col-md-2 col-form-label">
+              IFSC code</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control" 
+                id="ifsc_code"
+                placeholder="{{ data.ifsc_code }}"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="bank_account_number" class="col-md-2 col-form-label">
+              Bank_Account_No.</label
+            >
+            <div class="col-md-6">
+              <input  disabled 
+                type="text"
+                class="form-control"
+                id="bank_account_number"
+                placeholder="{{ data.bank_account_number }}"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <app-footer></app-footer> -->

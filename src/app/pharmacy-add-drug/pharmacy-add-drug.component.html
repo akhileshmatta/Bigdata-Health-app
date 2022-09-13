@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="form-v10">
+	<div class="page-content">
+		<div class="form-v10-content">
+			<form #drugForm="ngForm" class="form-detail was-validated" (ngSubmit)="addDrug(drugForm.value)">
+				<div class="form-left">
+					<h2>Drugs information</h2>
+					<div class="form-row ">
+						<input type="text" name="drug_id" ngModel  id="drug_id" class="input-text" placeholder="Drug ID" required>
+				    </div>
+                    <div class="form-row ">
+						<input type="text" name="drug_name" ngModel  id="drug_name" class="input-text" placeholder="Drug Name" required>
+				    </div>
+					<div class="form-row ">
+						<input type="text" name="drug_state"  ngModel id="drug_state" class="input-text" placeholder="Drug state" required>
+				    </div>
+					<div class="form-row ">
+						<input type="text" name="drug_type" ngModel id="drug_type" class="input-text" placeholder="Drug type" required>
+				    </div>
+                    <div class="form-row ">
+						<input type="text" name="drug_composition" ngModel id="drug_composition" class="input-text" placeholder="Drug Composition" required>
+				    </div>
+                    <div class="form-row ">
+						<input type="text" name="drug_manufacturer" ngModel id="drug_manufacturer" class="input-text" placeholder="Drug manufacturer" required>
+				    </div>
+					<div class="form-row ">
+						<input type="text" name="drug_recommended_dosage"  ngModel id="drug_recommended_dosage" class="input-text" placeholder="Drug Recommended Dosage" required>
+				    </div>
+					<div class="form-row ">
+						<input type="text" name="drug_cost"  ngModel id="drug_cost" class="input-text" placeholder="Drug Cost" required>
+				    </div>
+					<div class="form-row-last">
+						<input type="submit" name="ADD NEW DRUG" class="add" value="add" style="background-color: blue;">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
